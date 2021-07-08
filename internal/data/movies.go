@@ -7,7 +7,7 @@ type Movie struct {
 	CreatedAt time.Time `json:"-"` // - directive always hide this in the output
 	Title     string    `json:"title"`
 	Year      int32     `json:"year,omitempty"` // omitempty shows the output if and only if the field is not empty
-	Runtime   int32     `json:"runtime,omitempty"`
+	Runtime   Runtime   `json:"runtime,omitempty"`
 	Genres    []string  `json:"genres,omitempty"`
 	Version   int32     `json:"version"`
 }
